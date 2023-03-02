@@ -1,0 +1,8 @@
+{% for category in categoryData %}
+<b>{{category.title}}</b>| &nbsp;
+{% endfor %}<br /><br />
+
+{% for news in worldNews %}
+{{news.news_title}}<br />
+<img src="{{news.image.url}}" height= 250px /><br />
+{% endfor %}

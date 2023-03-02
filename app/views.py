@@ -9,3 +9,10 @@ def index(request):
         'worldNews':news.objects.filter(news_category=1)
     }
     return render(request, "index.html", data)
+
+def display_category(request):
+    data={
+        'categoryData':category.objects.all(),
+        'trendingNews':news.objects.all()
+    }
+    return render(request, "display_category.html", data)
